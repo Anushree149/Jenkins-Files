@@ -9,7 +9,7 @@ pipeline {
         } 
         stage('Deploy') { 
            steps {
-              sh "mv * /var/www/html/" 
+              sh "sudo mv * /var/www/html/" 
             } 
         } 
     } 
