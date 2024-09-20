@@ -9,7 +9,7 @@ pipeline {
         } 
         stage('Deploy') { 
            steps {
-              sh "mv . /var/www/html/" 
+              sh "mv * /var/www/html/" 
             } 
         } 
     } 
