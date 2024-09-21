@@ -17,7 +17,7 @@ pipeline {
                 sh "sudo systemctl restart apache2"
             }
         }
-        post {
+    post {
         success {
              emailext body: '''<html><body><h2>journalentry deployment - Version # $BUILD_NUMBER - Deployment $BUILD_STATUS.</h2><br/>
                         <br/>
@@ -52,7 +52,7 @@ pipeline {
                         ${BUILD_LOG, maxLines=50, escapeHtml=true}
                         </pre>
                         <b>--LOG-END--</b></body></html>''',
-                     subject:'Journal Entry Deployment failed :$PROJECT_NAME' , 
+                     subject:'Journal Entry Deployment failed: $PROJECT_NAME' , 
                      to: 'abdallahq989@gmail.com , idekaranushree@gmail.com',
                      mimeType: 'text/html'
         }
