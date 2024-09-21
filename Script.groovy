@@ -19,9 +19,9 @@ pipeline {
         }
         post {
         success {
-             emailext body: '''<html><body><h2>LMS PROD - Version # $BUILD_NUMBER - Deployment $BUILD_STATUS.</h2><br/>
+             emailext body: '''<html><body><h2>journalentry deployment - Version # $BUILD_NUMBER - Deployment $BUILD_STATUS.</h2><br/>
                         <br/>
-                        <h2>Deployed on lms.actifyzone.com</h2>
+                        <h2>Deployed on apache2.com</h2>
                         <br/>
                        <h3><b> Check console <a href="$BUILD_URL">output</a> to view full results.</b></h3><br/>
                         <b><i>If you cannot connect to the build server, check the attached logs.</i></b><br/>
@@ -35,7 +35,7 @@ pipeline {
                         </pre>
                         <b>--LOG-END--</b></body></html>''',
              subject:'LMS PROD Deployed Successfully - $PROJECT_NAME',
-             to: 'abdallahq989@gmail.com , abdallah.kammruddin@dextero.in , ashish.singh@dextero.in',
+             to: 'abdallahq989@gmail.com , idekaranushree@gmail.com',
              mimeType: 'text/html'
         }
         failure {
@@ -53,7 +53,7 @@ pipeline {
                         </pre>
                         <b>--LOG-END--</b></body></html>''',
                      subject:'LMS Deployment failed :$PROJECT_NAME' , 
-                     to: 'abdallahq989@gmail.com , ashish.singh@dextero.in',
+                     to: 'abdallahq989@gmail.com , idekaranushree@gmail.com',
                      mimeType: 'text/html'
         }
     } 
