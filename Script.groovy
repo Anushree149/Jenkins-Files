@@ -34,7 +34,7 @@ pipeline {
                         ${BUILD_LOG, maxLines=50, escapeHtml=true}
                         </pre>
                         <b>--LOG-END--</b></body></html>''',
-             subject:'LMS PROD Deployed Successfully - $PROJECT_NAME',
+             subject:'Journal entry Deployed Successfully - $PROJECT_NAME',
              to: 'abdallahq989@gmail.com , idekaranushree@gmail.com',
              mimeType: 'text/html'
         }
@@ -52,7 +52,7 @@ pipeline {
                         ${BUILD_LOG, maxLines=50, escapeHtml=true}
                         </pre>
                         <b>--LOG-END--</b></body></html>''',
-                     subject:'LMS Deployment failed :$PROJECT_NAME' , 
+                     subject:'Journal Entry Deployment failed :$PROJECT_NAME' , 
                      to: 'abdallahq989@gmail.com , idekaranushree@gmail.com',
                      mimeType: 'text/html'
         }
