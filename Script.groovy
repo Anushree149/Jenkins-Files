@@ -57,5 +57,5 @@ pipeline {
                      mimeType: 'text/html'
         }
     } 
-}
+  }
 }
