@@ -12,5 +12,10 @@ pipeline {
               sh "sudo mv * /var/www/html/" 
             } 
         } 
+        stage('Restart VM') {
+            steps {
+                sh "systemctl restart apache2"
+            }
+        }
     } 
 }
