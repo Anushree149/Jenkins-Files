@@ -14,7 +14,7 @@ pipeline {
         } 
         stage('Restart VM') {
             steps {
-                sh "sudo systemctl restart nginx"
+                sh "sudo systemctl restart apache2"
             }
         }
     }
